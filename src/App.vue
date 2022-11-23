@@ -9,17 +9,15 @@ import movieList from './components/movieList.vue'
   <header>
     <RouterLink to="/" >Home</RouterLink> <br />
     <RouterLink :to="{name : 'about'}" >about</RouterLink>
+    <router-link class="plain-link" :to="{ name: 'films' }">
+      API fetch films
+    </router-link>
   </header>
   <div>
  <RouterView></RouterView>
   </div >
 
-    <Suspense>
-      <movieList class="async-component" />
-      <template #fallback>
-        <SimpleLoading class="async-component" />
-      </template>
-    </Suspense>
+    
 
 
     
