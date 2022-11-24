@@ -15,8 +15,6 @@ const options = {
 };
 
 
-  
-
   const res = await fetch(`https://ghibliapi.herokuapp.com/films/${id}`, options );
 
   console.log(res)
@@ -34,11 +32,17 @@ const options = {
 <template>
    <div>
     <h2>{{ film.title }}</h2>
-    <router-link :to="{ name: 'film-info' }"></router-link> 
+    <label >Director:{{film.director}}</label>
+    <label >Producer:{{film.producer}}</label><br/>
+    | <router-link :to="{ name: 'film-info' }">info</router-link> |
+    <router-link :to="{ name: 'star-rating' }">star-rating</router-link> |
   </div>
   
 </template>
 
 <style>
+label{
+  font-size: 12px; padding: 1em; font-style: italic;
+}
 
 </style>

@@ -6,22 +6,21 @@ import movieList from './components/movieList.vue'
 </script>
 
 <template>
-  <header>
-    <RouterLink to="/" >Home</RouterLink> <br />
-    <RouterLink :to="{name : 'about'}" >about</RouterLink>
-    <router-link class="plain-link" :to="{ name: 'films' }">
-      API fetch films
-    </router-link>
-  </header>
   <div>
- <RouterView></RouterView>
-  </div >
-
-    
-
-
-    
+    <lu>
+    <li><RouterLink to="/" >Home</RouterLink></li>
+    <li><RouterLink :to="{name : 'about'}" >About</RouterLink> </li>
+    <li><router-link class="plain-link" :to="{ name: 'films' }">Films list</router-link></li>
+     
+  </lu>
+  </div>
   
+  <main >
+ <RouterView></RouterView>
+  </main >
+<footer>
+  <label style="font-size:12px;">Thank u Danii u make it easier than it could be!  || Umaima Alrawahi</label>
+</footer>
   
 </template>
 
@@ -37,6 +36,35 @@ import movieList from './components/movieList.vue'
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
 }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+}
+
+li{
+  float: center;
+  display: inline;
+  padding: 1.5em;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
+  
+}
+
+li RouterLink{
+ 
+  display: block;
+  padding: 8px;
+}
+
+h4{
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+
 
 
 </style>

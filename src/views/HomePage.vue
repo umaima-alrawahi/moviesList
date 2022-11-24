@@ -1,3 +1,3 @@
 <template>
-    <h1>hi, this is the home</h1>
+    <h4>wellcome to my introduction to Vue.js final project</h4>
 </template>

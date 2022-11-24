@@ -8,3 +8,4 @@ import movieList from '../components/movieList.vue';
     </template>
   </Suspense>
 </template>
+

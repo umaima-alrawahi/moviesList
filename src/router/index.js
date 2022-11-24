@@ -5,6 +5,7 @@ import AboutPage from '../views/AboutPage.vue';
 const moviesPage = () => import('../views/moviesListPage.vue');
 const moviePage = () => import('../views/movieDetailPage.vue');
 const movieInfo = () => import('../components/movieInfo.vue');
+const StarRating = () => import('../components/StarRating.vue');
 const routes = [
     {
     path: '/' ,
@@ -20,13 +21,16 @@ const routes = [
             path: '/films',
             name: 'films',
             component: moviesPage,
+
+
           },
         {
             path: '/films/:id',
             component: moviePage,
             props: true,
             children: [
-              { path: '', name: 'film-info', component: movieInfo }
+              { path: '', name: 'film-info', component: movieInfo }, 
+              { path: 'star', name: 'star-rating', component: StarRating },
             ],
         }
 ]
