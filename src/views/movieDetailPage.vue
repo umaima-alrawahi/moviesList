@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 import movieDetail from '../components/movieDetail.vue';
+import SimpleLoading from '../components/loading/SimpleLoading.vue';
 const { id } = defineProps(['id']);
 const film = ref({});
 
